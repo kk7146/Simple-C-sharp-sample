@@ -28,6 +28,14 @@ public class Player : MonoBehaviour
     {
         HP += num1;
     }
+    public int getHP()
+    {
+        return HP;
+    }
+    public int setHP(int HP)
+    {
+        this.HP = HP;
+    }
 }
 
 public class contr : MonoBehaviour

@@ -88,3 +88,34 @@ public class contr : MonoBehaviour
             Debug.Log("2");
     }
 }
+
+public class Entity
+{
+	public virtual void TakeDamage(int damage)
+	{
+		Debug.Log($"Entity: (damage)");
+	}
+}
+public class Moving Entity: Entity
+{
+	public override void TakeDamage(int damage)
+	{
+		Debug.Log($"Entity: (damage)");
+	}
+}
+public class Player: MovingEntity
+{
+	public override void TakeDamage(int damage)
+	{
+		Debug.Log($"Entity: (damage)");
+	}
+}
+
+
+public class MovingEntity: Entity
+{
+    public sealed override void TakeDamage(int damage)
+    {
+        Debug.Log($"Entity: (damage)");
+    }
+}
